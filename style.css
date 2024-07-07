@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
 /* Basic CSS for the navigation bar */
 body {
     margin: 0;
@@ -22,11 +29,13 @@ body {
     align-items: center;
 }
 
+/* Name in top left */
 .navbar-left .navbar-name {
     color: #f2f2f2;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 18px;
+    font-family: "Monsterrat", sans-serif;
+    font-size: 25px;
 }
 
 .navbar-center {
@@ -36,7 +45,7 @@ body {
 
 .navbar-center a,
 .dropbtn {
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -49,7 +58,7 @@ body {
 
 .navbar-center a:hover,
 .dropbtn:hover {
-    background-color: #ddd;
+    background-color: #b292d3;
     color: black;
 }
 
@@ -68,7 +77,7 @@ body {
 }
 
 .navbar-right a:hover {
-    background-color: #ddd;
+    background-color: #b292d3;
     color: black;
 }
 
@@ -98,7 +107,7 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #b292d3;
 }
 
 .dropdown:hover .dropdown-content {
