@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-.montserrat-font {
+.montserrat-regular {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -8,7 +8,9 @@
 /* Basic CSS for the navigation bar */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    background-color: #ccc0d8;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .navbar {
@@ -31,23 +33,26 @@ body {
 
 /* Name in top left */
 .navbar-left .navbar-name {
-    color: #f2f2f2;
+    color: #ffffff;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;    
     font-size: 25px;
 }
 
 .navbar-center {
-    display: flex;
+    /* display: flex; */
     align-items: center;
+    margin-left: -8%;
+    font-family: "Montserrat", sans-serif;  
+
 }
 
 .navbar-center a,
 .dropbtn {
     color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
+    text-align: left;
+    padding: 14px 14px;
     text-decoration: none;
     background-color: inherit;
     border: none;
@@ -68,7 +73,7 @@ body {
 }
 
 .navbar-right a {
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     margin-right: 10px;
@@ -118,4 +123,47 @@ body {
     padding: 16px;
     margin-top: 60px; /* Add a top margin to avoid content overlay */
     z-index: 1; /* Ensuring the content is below the navbar */
+    font-size: 20px;
+    width: 75%;
+    margin-left: 12%;
+    text-align: center;    
+    /* background-color: #b292d3; */
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;    
+
+
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;    
+    color: #000000;
+    font-size: 30px;
+    /* text-decoration: none; */
+}
+
+.feature {
+    background-color: #b292d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featureimg{
+    /* align-content: right; */
+    max-width: 25%;
+}
+
+.featuretext{
+    padding-left: 20px;
+}
+
+.footer{
+    font-family: "Monsterrat", sans-serif;
+    background-color: #b292d3;
+    padding-top: 15px;    
+    text-align: center;
+    height: 175px;
+    font-size: 24px;
 }
