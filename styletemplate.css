@@ -143,13 +143,7 @@ h2 {
     /* text-decoration: none; */
 }
 
-.grid-container{
-    display: grid;
-    column-gap: 5px;
-    row-gap: 30px;
-    grid-template-columns: auto auto auto;
 
-}
 
 .footer{
     font-family: "Monsterrat", sans-serif;
