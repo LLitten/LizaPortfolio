@@ -124,9 +124,9 @@ body {
     margin-top: 60px; /* Add a top margin to avoid content overlay */
     z-index: 1; /* Ensuring the content is below the navbar */
     font-size: 20px;
-    width: 75%;
+    width: 70%;
     margin-left: 12%;
-    text-align: center;    
+    /* text-align: center;     */
     /* background-color: #b292d3; */
 }
 
