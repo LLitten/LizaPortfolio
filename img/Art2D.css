@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+/* Basic CSS for the navigation bar */
+body {
+    margin: 0;
+    background-color: #ccc0d8;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.navbar {
+    overflow: visible; /* Ensure the navbar does not cut off the dropdown */
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000; /* Ensuring the navbar is above other content */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Name in top left */
+.navbar-left .navbar-name {
+    color: #ffffff;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;    
+    font-size: 25px;
+}
+
+.navbar-center {
+    /* display: flex; */
+    align-items: center;
+    margin-left: -8%;
+    font-family: "Montserrat", sans-serif;  
+
+}
+
+.navbar-center a,
+.dropbtn {
+    color: #ffffff;
+    text-align: left;
+    padding: 14px 14px;
+    text-decoration: none;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    outline: none;
+}
+
+.navbar-center a:hover,
+.dropbtn:hover {
+    background-color: #b292d3;
+    color: black;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-right a:hover {
+    background-color: #b292d3;
+    color: black;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 15px); /* Ensure the dropdown appears below the navbar */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Ensuring the dropdown is above other content */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #b292d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    padding: 16px;
+    margin-top: 60px; /* Add a top margin to avoid content overlay */
+    z-index: 1; /* Ensuring the content is below the navbar */
+    font-size: 20px;
+    width: 70%;
+    margin-left: 12%;
+    text-align: center;    
+    /* background-color: #b292d3; */
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;    
+
+
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;    
+    color: #000000;
+    font-size: 30px;
+    /* text-decoration: none; */
+}
+
+.grid-container{
+    display: grid;
+    column-gap: 15px;
+    row-gap: 30px;
+    grid-template-columns: auto auto ;
+
+}
+
+
+.footer{
+    font-family: "Monsterrat", sans-serif;
+    background-color: #b292d3;
+    padding-top: 15px;    
+    text-align: center;
+    height: 175px;
+    font-size: 20px;
+}
