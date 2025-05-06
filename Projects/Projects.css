@@ -185,6 +185,24 @@ h1, h2 {
     .hamburger-menu {
         display: none; /* toggled with JS */
     }
+
+    .project, .project2{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .projectimg{
+        max-width: 95vw;
+        width: 95vw;
+        margin-bottom: 15px;
+    }
+
+    .projecttext{
+        padding-left: 0;
+    }
+
+
 }
 
 
@@ -214,7 +232,7 @@ h1, h2 {
 
 
 .footer{
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #b292d3;
     padding-top: 15px;    
     text-align: center;
