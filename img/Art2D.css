@@ -165,7 +165,7 @@ h1, h2 {
     padding: 20px;
     margin-top: 50px;
     width: 110vw;
-    max-width: 100%;
+    /* max-width: 100%; */
     box-sizing: border-box;
 }
 
@@ -229,7 +229,7 @@ h1, h2 {
         display: grid;
         grid-template-columns: auto;
         justify-content: center;
-        margin-left: 0;
+        margin-bottom: 5px;
     } 
 }
 .grid-container img, .grid-container video{
