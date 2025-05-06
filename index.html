@@ -26,6 +26,7 @@
                 </div>
             </div>
             <a href="Projects/Projects.html">Projects</a>
+            
         </div><!-- close navbar center -->
 
         <!-- social media links -->
@@ -34,34 +35,44 @@
             <a href="https://www.instagram.com/lzlart/" target="_blank"><i class="fab fa-instagram"></i></a>
 
         </div>
+                    <!-- hamburger menu icon -->
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <!-- dropdown menu shown when hamburger is clicked -->
+            <div id="hamburger-menu" class="hamburger-menu">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="img\Art2D.html">2D Illustrations</a>
+                <a href="img\ArtOther.html">Other Art</a>
+                <a href="Projects/Projects.html">Projects</a>
+
+
+
+            </div>
     </div><!-- close navbar -->
 
     <div class="content">
-        <h1>Game Producer</h1>
-        <p>I'm a video game producer, artist, and designer. I have experience leading teams of 7-10 people while actively being involved in projects as an artist or designer. I'm always looking to learn new things and grow myself. <br>My skills include proficiency in Microsoft Office applications and the Google Apps equivalant, project management using Scrum, Adobe Suite, Unreal Engine 4 & 5, Unity, and basic programming. I programmed the site you're seeing! </p>
+        <h1>Art Producer</h1>
+        <p>I'm a video game/art producer, 2D artist, and designer. I have experience leading teams of 7-10 people while actively being involved in projects as an artist or designer. I'm always looking to learn new things and grow myself. <br>My skills include proficiency in Microsoft Office applications and the Google Apps equivalant, project management using Scrum, Adobe Suite, Unreal Engine 4 & 5, Unity, and basic programming. I programmed the site you're seeing! </p>
         <br>
         <a href="About.html"> <h2>Learn More About Me</h2></a>
         <br>
         <h2>Featured Project</h2>
         <div class="feature">
             <div class="featureimg">
-                <img src="Projects\AbleGamersLogo.jpg" alt="AbleGamers Charity Logo" width="100%" >    
+                <img src="img\2DArt\tp2025full.png" alt="Trans Prom 2025 Outfit" width="50%" >    
             </div><!-- close featureimg -->
             <div class="featuretext">
-                <h2>AbleGamers Charity Research Project</h2>
+                <video width="auto" height="550px" controls>
+                    <source src="img\2DArt\tp2025full.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video> 
+                <!-- <h2>Project</h2>
 
-                <p>Role: Post-Graduate Researcher <br>Researched accessibility in the video game industry by analyzing data and surveying APX participants. Compiled survey data and organized statistical data.</p>
+                <p>Role: </p> -->
             </div><!-- close featuretext -->
         </div><!-- close feature -->
-      <a href="Projects.html"> <h2>See More Projects</h2></a>
-      <!-- <br>
-      <h2>Game Design Document Sample</h2>
-      <object
-        type="application/pdf"
-        data="img\LightKeeper_GDD.pdf"
-        height="700px"
-        width="40%"
-        > -->
+      <a href="Projects\Projects.html"> <h2>See More Projects</h2></a>
+
     </object>
 
 
@@ -75,5 +86,27 @@
         <p>Discord: @Zaigg_</p>
 
     </div><!-- close footer -->
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('hamburger-menu');
+            menu.classList.toggle('show');
+        }
+    
+        // Close hamburger menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('hamburger-menu');
+            var hamburger = document.querySelector('.hamburger');
+    
+            // If click is *not* inside menu or hamburger button
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+        
+
+
 </body>
 </html>

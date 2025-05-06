@@ -34,6 +34,17 @@
             <a href="https://www.instagram.com/lzlart/" target="_blank"><i class="fab fa-instagram"></i></a>
 
         </div>
+        
+        <!-- hamburger menu icon -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <!-- dropdown menu shown when hamburger is clicked -->
+        <div id="hamburger-menu" class="hamburger-menu">
+            <a href="../index.html">Home</a>
+            <a href="../About.html">About</a>
+            <a href="Art2D.html">2D Illustrations</a>
+            <a href="ArtOther.html">Other Art</a>
+            <a href="../Projects/Projects.html">Projects</a>
+        </div>
     </div><!-- close navbar -->
 
     <div class="content">
@@ -70,5 +81,27 @@
         <p>Discord: @Zaigg_</p>
 
     </div><!-- close footer -->
+
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('hamburger-menu');
+            menu.classList.toggle('show');
+        }
+    
+        // Close hamburger menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('hamburger-menu');
+            var hamburger = document.querySelector('.hamburger');
+    
+            // If click is *not* inside menu or hamburger button
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+        
+
 </body>
 </html>

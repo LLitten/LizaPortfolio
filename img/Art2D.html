@@ -34,6 +34,16 @@
             <a href="https://www.instagram.com/lzlart/" target="_blank"><i class="fab fa-instagram"></i></a>
 
         </div>
+        <!-- hamburger menu icon -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <!-- dropdown menu shown when hamburger is clicked -->
+        <div id="hamburger-menu" class="hamburger-menu">
+            <a href="../index.html">Home</a>
+            <a href="../About.html">About</a>
+            <a href="Art2D.html">2D Illustrations</a>
+            <a href="ArtOther.html">Other Art</a>
+            <a href="../Projects/Projects.html">Projects</a>
+        </div>
     </div><!-- close navbar -->
 
     <div class="content">
@@ -41,14 +51,22 @@
         <p><b>All work shown is my own. Do not use for any AI image generation/training or NFTs.</b><br>Setup: iPad Pro 4th Gen, Huion Kamvas Pro 13<br>Software: Procreate for ipad, Clip Studio Paint EX, Adobe Photoshop</p> 
 
         <div class="grid-container">
-
-
             <div class="grid-item">
-                <img src="2DArt\sylushairL.png" alt="Cafe" width="auto" height="500px"> 
+                <img src="2DArt\tp2025full.png" alt="Trans Prom 2025" width="auto" height="500px"> 
+            </div>
+            <div class="grid-item">
+                <video width="auto" height="500px" controls>
+                    <source src="2DArt\tp2025full.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video> 
+            </div>
+            
+            <div class="grid-item">
+                <img src="2DArt\sylushairL.png" alt="Sylus: Long Hair" width="auto" height="500px"> 
             </div>
             <br>
             <div class="grid-item">
-                <img src="2DArt\felix1.png" alt="Cafe" width="auto" height="500px"> 
+                <img src="2DArt\felix1.png" alt="Felix (Stray Kids)" width="auto" height="500px"> 
             </div>
             <div class="grid-item">
                 <video width="auto" height="500px" controls>
@@ -57,7 +75,7 @@
                   </video> 
             </div>
             <div class="grid-item">
-                <img src="2DArt\sylushanfu.png" alt="Cafe" width="auto" height="500px"> 
+                <img src="2DArt\sylushanfu.png" alt="Sylus: Hanfu" width="auto" height="500px"> 
             </div>
             <div class="grid-item">
                 <video width="auto" height="500px" controls>
@@ -66,7 +84,7 @@
                   </video> 
             </div>
             <div class="grid-item">
-                <img src="2DArt\calebhair.png" alt="Cafe" width="auto" height="500px"> 
+                <img src="2DArt\calebhair.png" alt="Caleb: Long Hair" width="auto" height="500px"> 
             </div>
             <div class="grid-item">
                 <video width="auto" height="500px" controls>
@@ -149,10 +167,6 @@
     </div><!-- close content -->
 
 
-
-
-
-
     <div class="footer">
         <p>Email: liza.grace.1020@gmail.com</p>
         <a href="https://www.linkedin.com/feed/">LinkedIn</a>
@@ -160,5 +174,26 @@
         <p>Discord: @Zaigg_</p>
 
     </div><!-- close footer -->
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('hamburger-menu');
+            menu.classList.toggle('show');
+        }
+    
+        // Close hamburger menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('hamburger-menu');
+            var hamburger = document.querySelector('.hamburger');
+    
+            // If click is *not* inside menu or hamburger button
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+    
+        
+
 </body>
 </html>
