@@ -3,11 +3,16 @@
 ======================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+*{
+    max-width: 100%;
+}
+
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
     background-color: #ccc0d8;
+    max-width: 100%;
 }
 
 h1, h2 {
