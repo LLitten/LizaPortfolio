@@ -213,3 +213,27 @@ h1, h2 {
     flex-wrap: nowrap;
 }
 
+@media (orientation: portrait){
+    .feature{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .featureimg img{
+        width: 100%;
+        height: auto;
+    }
+
+    .featuretext{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 90vw;
+        margin-top: 20px;
+    }
+
+    .featuretext video{
+        max-width: 90%;
+        height: auto;
+    }
+}
