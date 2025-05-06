@@ -190,6 +190,7 @@ h1, h2 {
         flex-direction: column;
         text-align: center;
         padding: 20px;
+
     }
 
     .projectimg{
@@ -220,6 +221,12 @@ h1, h2 {
     justify-content: center;
 }
 
+.project, .project2{
+    max-width: 85vw;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
 .projectimg{
     align-self: left;
     max-width: 35%;
@@ -230,12 +237,8 @@ h1, h2 {
     padding-left: 20px;
 }
 
-
-.footer{
-    font-family: "Montserrat", sans-serif;
-    background-color: #b292d3;
-    padding-top: 15px;    
-    text-align: center;
-    height: 175px;
-    font-size: 20px;
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
