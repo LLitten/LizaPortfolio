@@ -237,3 +237,8 @@ h1, h2 {
         height: auto;
     }
 }
+
+body, html{
+    overflow-x: hidden;
+    width: 100%;
+}
