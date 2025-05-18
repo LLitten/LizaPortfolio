@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-    max-width: 90%;
+    max-width: 100%;
 }
 
 body {
@@ -29,7 +29,7 @@ h1, h2 {
     position: relative;
     padding: 0 25px;
     width: 100%;
-    max-width: 100%;
+    max-width: 120%;
     background-color: #333;
     height: 60px;
     z-index: 1000;
