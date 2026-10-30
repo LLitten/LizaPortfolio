@@ -986,8 +986,8 @@ a { color: inherit; }
 
 .art-piece { margin: 0; }
 
-/* every tile shares one frame; the full piece opens in the lightbox */
-.art-piece .zoom { aspect-ratio: 4 / 5; }
+/* square tiles, like ArtStation; the full piece opens in the lightbox */
+.art-piece .zoom { aspect-ratio: 1 / 1; }
 
 .art-piece .zoom img {
   width: 100%;
