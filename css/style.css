@@ -976,46 +976,44 @@ a { color: inherit; }
 .art-gallery { padding-bottom: clamp(48px, 7vw, 88px); }
 
 .art-grid {
-  --art-gap: clamp(16px, 2.5vw, 28px);
-  columns: 3 300px;
-  column-gap: var(--art-gap);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 3vw, 36px) clamp(16px, 2.5vw, 28px);
 }
 
-/* once main.js has laid the pieces out in reading order */
-.art-grid.is-masonry {
-  columns: auto;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--art-gap);
+@media (max-width: 900px) { .art-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .art-grid { grid-template-columns: 1fr; } }
+
+.art-piece { margin: 0; }
+
+/* every tile shares one frame; the full piece opens in the lightbox */
+.art-piece .zoom { aspect-ratio: 4 / 5; }
+
+.art-piece .zoom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--focus, 50% 20%);
 }
-
-.art-col { flex: 1 1 0; min-width: 0; }
-
-.art-piece {
-  break-inside: avoid;
-  margin: 0 0 clamp(20px, 3vw, 32px);
-}
-
-.art-piece .zoom img { width: 100%; height: auto; }
 
 .art-piece figcaption {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  margin-top: 12px;
+  min-height: 34px;
 }
 
-.art-title { font-weight: 600; color: var(--text); }
+.art-title { display: block; font-weight: 600; color: var(--text); line-height: 1.3; }
 
-.art-date { font-size: 0.85rem; color: var(--text-muted); }
+.art-date { display: block; font-size: 0.85rem; color: var(--text-muted); }
 
 .process-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 8px;
+  flex-shrink: 0;
   padding: 6px 14px;
   border: 1.5px solid var(--border);
   border-radius: 999px;
@@ -1083,40 +1081,11 @@ a { color: inherit; }
    About
    ========================================================================== */
 
-.about-intro .wrap {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: clamp(24px, 5vw, 64px);
-  align-items: start;
-}
-
-.about-intro p { color: var(--text-soft); margin: 0 0 16px; max-width: 62ch; }
+.about-intro p { color: var(--text-soft); margin: 0 0 16px; max-width: 68ch; }
 
 .about-intro p:first-of-type { color: var(--text); font-size: 1.1rem; }
 
-.about-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: 8px 8px 0 var(--purple-deep);
-}
-
-.about-card dl { margin: 0 0 20px; display: grid; gap: 14px; }
-
-.about-card dt {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.about-card dd { margin: 2px 0 0; }
-
-@media (max-width: 860px) {
-  .about-intro .wrap { grid-template-columns: 1fr; }
-}
+.about-intro .text-link { margin-top: 8px; }
 
 .about-section {
   padding: clamp(40px, 6vw, 72px) 0;
