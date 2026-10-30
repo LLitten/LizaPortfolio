@@ -1,6 +1,6 @@
 /* ==========================================================================
    Liza "Zai" Litten — portfolio
-   Dark charcoal base with a purple → crimson accent.
+   Dark charcoal base with muted plum and oxblood accents.
    ========================================================================== */
 
 :root {
@@ -11,13 +11,13 @@
   --text: #eeeaf2;
   --text-soft: #bdb5c6;
   --text-muted: #857d8f;
-  --purple: #9b6cff;
-  --purple-deep: #6d3fd6;
-  --red: #e2445c;
-  --red-deep: #a8243a;
+  --purple: #9a85bd;
+  --purple-deep: #46355f;
+  --red: #b8423c;
+  --red-text: #cc5f54;
+  --red-deep: #6e231f;
   --line: rgba(238, 234, 242, 0.1);
   --border: rgba(238, 234, 242, 0.18);
-  --accent-grad: linear-gradient(100deg, var(--purple) 0%, var(--red) 100%);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -44,7 +44,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Soft colour glows + film grain for an inked, artsy texture */
+/* Faint vignette + film grain for a printed, painterly texture */
 body::after {
   content: "";
   position: fixed;
@@ -52,8 +52,8 @@ body::after {
   pointer-events: none;
   z-index: -1;
   background:
-    radial-gradient(60vw 50vh at 85% -10%, rgba(155, 108, 255, 0.14), transparent 70%),
-    radial-gradient(50vw 50vh at -10% 110%, rgba(226, 68, 92, 0.1), transparent 70%);
+    radial-gradient(60vw 50vh at 85% -10%, rgba(154, 133, 189, 0.07), transparent 70%),
+    radial-gradient(50vw 50vh at -10% 110%, rgba(184, 66, 60, 0.06), transparent 70%);
 }
 
 body::before {
@@ -71,7 +71,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 a { color: inherit; }
 
-::selection { background: var(--purple); color: #fff; }
+::selection { background: var(--purple-deep); color: #fff; }
 
 .wrap {
   width: 100%;
@@ -135,12 +135,12 @@ a { color: inherit; }
 }
 
 .nav-links .nav-resume {
-  background: var(--accent-grad);
+  background: var(--red);
   color: #fff;
   margin-left: 6px;
 }
 
-.nav-links .nav-resume:hover { color: #fff; filter: brightness(1.12); }
+.nav-links .nav-resume:hover { background: #c94d46; color: #fff; }
 
 .nav-toggle {
   display: none;
@@ -225,7 +225,7 @@ a { color: inherit; }
   right: -1%;
   bottom: 0;
   height: 9px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop offset='0' stop-color='%239b6cff'/%3E%3Cstop offset='1' stop-color='%23e2445c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M3 13 C 40 5, 90 17, 130 9 S 185 6, 197 11' fill='none' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop offset='0' stop-color='%239a85bd'/%3E%3Cstop offset='1' stop-color='%23b8423c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M3 13 C 40 5, 90 17, 130 9 S 185 6, 197 11' fill='none' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
 }
 
 .intro-text p {
@@ -245,7 +245,7 @@ a { color: inherit; }
   transition: gap 0.2s, color 0.2s;
 }
 
-.text-link:hover { gap: 12px; color: var(--red); }
+.text-link:hover { gap: 12px; color: var(--red-text); }
 
 @media (max-width: 760px) {
   .intro .wrap { grid-template-columns: 1fr; align-items: start; gap: 18px; }
@@ -275,10 +275,7 @@ a { color: inherit; }
   font-weight: 400;
   margin-right: 10px;
   font-size: 0.7em;
-  background: var(--accent-grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--purple);
 }
 
 /* ---------- Featured project ---------- */
@@ -292,7 +289,7 @@ a { color: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 10px 10px 0 var(--purple-deep), 10px 10px 40px rgba(155, 108, 255, 0.25);
+  box-shadow: 10px 10px 0 var(--purple-deep);
 }
 
 .feature-media {
@@ -330,7 +327,6 @@ a { color: inherit; }
   padding: 6px 12px;
   border-radius: 999px;
   transform: rotate(-3deg);
-  box-shadow: 0 6px 18px rgba(226, 68, 92, 0.4);
 }
 
 .feature-body {
@@ -383,13 +379,13 @@ a { color: inherit; }
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: transform 0.15s, filter 0.2s, border-color 0.2s;
+  transition: transform 0.15s, background 0.2s, border-color 0.2s;
 }
 
 .btn:hover { transform: translateY(-2px); }
 
-.btn-primary { background: var(--accent-grad); color: #fff; }
-.btn-primary:hover { filter: brightness(1.12); }
+.btn-primary { background: var(--red); color: #fff; }
+.btn-primary:hover { background: #c94d46; }
 
 .btn-ghost { border: 1.5px solid var(--border); color: var(--text); }
 .btn-ghost:hover { border-color: var(--text); }
@@ -428,7 +424,7 @@ a { color: inherit; }
 }
 
 .highlight.logo-tile {
-  background: radial-gradient(circle at 50% 40%, #3a2a4d, var(--surface) 72%);
+  background: radial-gradient(circle at 50% 40%, #2e2638, var(--surface) 72%);
 }
 
 .highlight.logo-tile img {
@@ -523,7 +519,7 @@ a { color: inherit; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--red-text);
   margin: 0;
 }
 
@@ -580,10 +576,7 @@ a { color: inherit; }
 
 .footer-cta em {
   font-weight: 400;
-  background: var(--accent-grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--purple);
 }
 
 .footer-email {
@@ -606,8 +599,8 @@ a { color: inherit; }
 }
 
 .socials a:hover {
-  background: var(--accent-grad);
-  border-color: transparent;
+  background: var(--purple-deep);
+  border-color: var(--purple);
   transform: rotate(-8deg);
 }
 
