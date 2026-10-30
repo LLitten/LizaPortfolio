@@ -386,15 +386,6 @@ a { color: inherit; }
   background: var(--surface);
   aspect-ratio: 16 / 10;
   border: 1px solid var(--border);
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.highlight:nth-child(1) { transform: rotate(-1.2deg); }
-.highlight:nth-child(2) { transform: rotate(0.8deg); }
-.highlight:nth-child(3) { transform: rotate(-0.6deg); }
-.highlight:hover {
-  transform: rotate(0) translateY(-4px);
-  box-shadow: 6px 6px 0 var(--red-deep);
 }
 
 .highlight img {
