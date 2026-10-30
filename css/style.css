@@ -404,6 +404,10 @@ a { color: inherit; }
   object-position: 50% 0;
 }
 
+/* a single row cut from an asset sheet, shown whole on its sheet colour */
+.highlight.strip { background: #808080; }
+.highlight.strip img { object-fit: contain; padding: 3%; }
+
 .highlight.logo-tile {
   background: radial-gradient(circle at 50% 40%, #2e2638, var(--surface) 72%);
 }
@@ -827,6 +831,43 @@ a { color: inherit; }
   .gallery { grid-template-columns: 1fr; }
   .gallery.cols-4 { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* collapsible "see all" block under a curated selection */
+.see-all { margin-top: clamp(20px, 3vw, 32px); }
+
+.see-all summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  list-style: none;
+  transition: border-color 0.2s;
+}
+
+.see-all summary::-webkit-details-marker { display: none; }
+
+.see-all summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.see-all[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+
+.see-all summary:hover { border-color: var(--text-soft); }
+
+.see-all .count { font-weight: 400; color: var(--text-muted); }
+
+.see-all > .gallery { margin-top: clamp(20px, 3vw, 28px); }
 
 /* design-notes toggle (swaps images for their annotated versions) */
 .notes-toggle {

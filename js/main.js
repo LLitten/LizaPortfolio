@@ -89,7 +89,8 @@ if (allZooms.length) {
   };
 
   allZooms.forEach((z) => z.addEventListener('click', () => {
-    zooms = allZooms.filter((el) => el.offsetParent !== null);
+    // checkVisibility also excludes images inside a closed <details>
+    zooms = allZooms.filter((el) => (el.checkVisibility ? el.checkVisibility() : el.offsetParent !== null));
     box.querySelectorAll('.lb-prev, .lb-next').forEach((btn) => { btn.hidden = zooms.length < 2; });
     show(zooms.indexOf(z));
     box.showModal();
