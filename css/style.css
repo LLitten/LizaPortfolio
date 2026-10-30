@@ -406,7 +406,7 @@ a { color: inherit; }
 
 /* a single icon cut from an asset sheet, shown whole on its sheet colour */
 .highlight.icon { background: #808080; }
-.highlight.icon img { object-fit: contain; object-position: 50% 50%; padding: 2% 2% 9%; }
+.highlight.icon img { object-fit: contain; object-position: 50% 50%; padding: 4%; }
 
 .highlight.logo-tile {
   background: radial-gradient(circle at 50% 40%, #2e2638, var(--surface) 72%);
