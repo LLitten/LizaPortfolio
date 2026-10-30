@@ -135,12 +135,12 @@ a { color: inherit; }
 }
 
 .nav-links .nav-resume {
-  background: var(--red);
-  color: #fff;
+  border: 1.5px solid var(--border);
+  color: var(--text);
   margin-left: 6px;
 }
 
-.nav-links .nav-resume:hover { background: #c94d46; color: #fff; }
+.nav-links .nav-resume:hover { border-color: var(--text-soft); }
 
 .nav-toggle {
   display: none;
@@ -217,6 +217,9 @@ a { color: inherit; }
   padding-bottom: 8px;
 }
 
+/* Fraunces' italic ampersand reads like an "e", so use the body face */
+.role .amp { font-family: var(--font-body); font-style: normal; font-size: 0.9em; }
+
 /* hand-drawn brush underline */
 .role::after {
   content: "";
@@ -225,7 +228,7 @@ a { color: inherit; }
   right: -1%;
   bottom: 0;
   height: 9px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop offset='0' stop-color='%239a85bd'/%3E%3Cstop offset='1' stop-color='%23b8423c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M3 13 C 40 5, 90 17, 130 9 S 185 6, 197 11' fill='none' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop offset='0' stop-color='%239a85bd'/%3E%3Cstop offset='1' stop-color='%239a85bd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M3 13 C 40 5, 90 17, 130 9 S 185 6, 197 11' fill='none' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
 }
 
 .intro-text p {
@@ -268,14 +271,6 @@ a { color: inherit; }
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   letter-spacing: -0.02em;
   margin: 0;
-}
-
-.section-head h2 .num {
-  font-style: italic;
-  font-weight: 400;
-  margin-right: 10px;
-  font-size: 0.7em;
-  color: var(--purple);
 }
 
 /* ---------- Featured project ---------- */
@@ -369,8 +364,8 @@ a { color: inherit; }
 
 .btn:hover { transform: translateY(-2px); }
 
-.btn-primary { background: var(--red); color: #fff; }
-.btn-primary:hover { background: #c94d46; }
+.btn-primary { background: var(--surface-2); border: 1.5px solid var(--border); color: var(--text); }
+.btn-primary:hover { border-color: var(--text-soft); }
 
 .btn-ghost { border: 1.5px solid var(--border); color: var(--text); }
 .btn-ghost:hover { border-color: var(--text); }
@@ -544,9 +539,8 @@ a { color: inherit; }
 }
 
 .project-card:hover .more {
-  background: var(--red);
-  border-color: var(--red);
-  color: #fff;
+  background: var(--surface-2);
+  border-color: var(--text-soft);
   gap: 12px;
 }
 
@@ -572,7 +566,7 @@ a { color: inherit; }
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 2px solid var(--purple);
+  border-bottom: 2px solid var(--red);
   overflow-wrap: anywhere;
 }
 
