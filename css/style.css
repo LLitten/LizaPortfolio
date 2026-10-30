@@ -404,9 +404,9 @@ a { color: inherit; }
   object-position: 50% 0;
 }
 
-/* a single row cut from an asset sheet, shown whole on its sheet colour */
-.highlight.strip { background: #808080; }
-.highlight.strip img { object-fit: contain; padding: 3%; }
+/* a single icon cut from an asset sheet, shown whole on its sheet colour */
+.highlight.icon { background: #808080; }
+.highlight.icon img { object-fit: contain; object-position: 50% 50%; padding: 2% 2% 9%; }
 
 .highlight.logo-tile {
   background: radial-gradient(circle at 50% 40%, #2e2638, var(--surface) 72%);
