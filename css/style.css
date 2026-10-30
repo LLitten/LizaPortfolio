@@ -565,22 +565,13 @@ a { color: inherit; }
   flex-wrap: wrap;
 }
 
-.footer-cta {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  margin: 0 0 12px;
-}
-
-.footer-cta em {
-  font-weight: 400;
-  color: var(--purple);
-}
+.site-footer .eyebrow { display: block; }
 
 .footer-email {
-  font-weight: 700;
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 600;
   text-decoration: none;
   border-bottom: 2px solid var(--purple);
   overflow-wrap: anywhere;
