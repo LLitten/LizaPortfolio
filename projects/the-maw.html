@@ -48,38 +48,98 @@
           <div><dt>Dev Time</dt><dd>5 months</dd></div>
         </dl>
 
-        <div class="project-cover">
-          <img src="../assets/Projects/TheMaw/web/Title1_NoNotes.webp" alt="The Maw title screen with hand-lettered title and Play, Options, Quit carved into stone" width="1600" height="900">
-        </div>
+        <figure class="project-cover contain">
+          <img src="../assets/Projects/TheMaw/web/FinalTitleScreen.webp" alt="Final title screen: a towering, tooth-lined spire rising from jagged rock, painted in greyscale" width="685" height="837">
+        </figure>
       </div>
     </header>
 
-    <section class="project-section" aria-labelledby="title-screens">
+    <div class="view-switch">
       <div class="wrap">
-        <div class="section-head">
-          <h2 id="title-screens">Title Screens</h2>
-          <button class="notes-toggle" aria-pressed="false"><span class="switch" aria-hidden="true"></span> Show design notes</button>
+        <div class="view-tabs" role="tablist" aria-label="Project view">
+          <button role="tab" id="tab-final" data-view="final" aria-controls="panel-final" aria-selected="true">Finished Work</button>
+          <button role="tab" id="tab-process" data-view="process" aria-controls="panel-process" aria-selected="false" tabindex="-1">Process</button>
         </div>
-        <div class="gallery">
-          <figure>
-            <button class="zoom"><img src="../assets/Projects/TheMaw/web/Title1_NoNotes.webp" data-noted="../assets/Projects/TheMaw/web/Title1_Noted.webp" alt="Title screen version 1" loading="lazy" width="1600" height="900"></button>
-            <figcaption><strong>Title Screen 1</strong></figcaption>
-          </figure>
-          <figure>
-            <button class="zoom"><img src="../assets/Projects/TheMaw/web/Title2_NoNotes.webp" data-noted="../assets/Projects/TheMaw/web/Title2_Noted.webp" alt="Title screen version 2 with menu options carved along a curved ribcage" loading="lazy" width="1600" height="900"></button>
-            <figcaption><strong>Title Screen 2</strong></figcaption>
-          </figure>
-        </div>
+        <p class="view-hint" data-hint="final">Final assets as they appeared in the game.</p>
+        <p class="view-hint" data-hint="process" hidden>Concepts, mockups and iterations.</p>
       </div>
-    </section>
+    </div>
 
-    <section class="project-section" aria-labelledby="hud">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="hud">HUD</h2>
-          <button class="notes-toggle" aria-pressed="false"><span class="switch" aria-hidden="true"></span> Show design notes</button>
+    <div class="view-panel" id="panel-final" role="tabpanel" aria-labelledby="tab-final">
+      <section class="project-section" aria-labelledby="final-hud">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="final-hud">HUD</h2>
+          </div>
+          <div class="gallery cols-1">
+          <figure class="wide">
+            <button class="zoom"><img src="../assets/Projects/TheMaw/HUD_1.gif" alt="Final HUD in motion: HP bar bottom left, diamond weapon selector bottom right" loading="lazy" width="1920" height="1080"></button>
+            <figcaption><strong>HUD</strong> · In motion</figcaption>
+          </figure>
+          </div>
         </div>
-        <div class="gallery">
+      </section>
+
+      <section class="project-section" aria-labelledby="final-hud-elements">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="final-hud-elements">HUD Elements</h2>
+          </div>
+          <div class="gallery">
+          <figure>
+            <button class="zoom contain"><img src="../assets/Projects/TheMaw/HP_Bar.gif" alt="Animated HP bar" loading="lazy" width="446" height="100"></button>
+            <figcaption>HP Bar</figcaption>
+          </figure>
+          <figure>
+            <button class="zoom contain"><img src="../assets/Projects/TheMaw/Weapons_1.gif" alt="Diamond weapon selector animation" loading="lazy" width="484" height="196"></button>
+            <figcaption>Weapon Selector</figcaption>
+          </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="final-dialogue">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="final-dialogue">Dialogue Box</h2>
+          </div>
+          <div class="gallery cols-1">
+          <figure class="wide">
+            <button class="zoom"><img src="../assets/Projects/TheMaw/web/Dialogue_StyleB.webp" alt="Final dialogue box: dark grey box with ragged, torn edges and a smudged name plate" loading="lazy" width="740" height="300"></button>
+            <figcaption><strong>Dialogue Box</strong></figcaption>
+          </figure>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="view-panel" id="panel-process" role="tabpanel" aria-labelledby="tab-process" hidden>
+      <section class="project-section" aria-labelledby="p-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="p-title">Title Screen Concepts</h2>
+          <button class="notes-toggle" aria-pressed="false"><span class="switch" aria-hidden="true"></span> Show design notes</button>
+          </div>
+          <div class="gallery">
+          <figure>
+            <button class="zoom"><img src="../assets/Projects/TheMaw/web/Title1_NoNotes.webp" data-noted="../assets/Projects/TheMaw/web/Title1_Noted.webp" alt="Title screen concept 1" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Title Screen</strong> · Concept 1</figcaption>
+          </figure>
+          <figure>
+            <button class="zoom"><img src="../assets/Projects/TheMaw/web/Title2_NoNotes.webp" data-noted="../assets/Projects/TheMaw/web/Title2_Noted.webp" alt="Title screen concept 2 with menu options carved along a curved ribcage" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Title Screen</strong> · Concept 2</figcaption>
+          </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="p-hud">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="p-hud">HUD Mockups</h2>
+          <button class="notes-toggle" aria-pressed="false"><span class="switch" aria-hidden="true"></span> Show design notes</button>
+          </div>
+          <div class="gallery">
           <figure>
             <button class="zoom"><img src="../assets/Projects/TheMaw/web/HUD1_V1_Noted.webp" alt="HUD 1, version 1 wireframe with annotations" loading="lazy" width="1600" height="900"></button>
             <figcaption><strong>HUD 1</strong> · Version 1</figcaption>
@@ -96,54 +156,38 @@
             <button class="zoom"><img src="../assets/Projects/TheMaw/web/HUD2_V2_NoNotes.webp" data-noted="../assets/Projects/TheMaw/web/HUD2_V2_Noted.webp" alt="HUD 2, version 2" loading="lazy" width="1600" height="900"></button>
             <figcaption><strong>HUD 2</strong> · Version 2</figcaption>
           </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-section" aria-labelledby="hud-animation">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="hud-animation">HUD Animation</h2>
-        </div>
-        <div class="gallery">
-          <figure>
-            <button class="zoom"><img src="../assets/Projects/TheMaw/HUD_1.gif" alt="Animated HUD 1" loading="lazy" width="1920" height="1080"></button>
-            <figcaption><strong>HUD 1</strong> · In motion</figcaption>
-          </figure>
-          <figure>
-            <button class="zoom"><img src="../assets/Projects/TheMaw/HUD_2.gif" alt="Animated HUD 2" loading="lazy" width="1920" height="1080"></button>
-            <figcaption><strong>HUD 2</strong> · In motion</figcaption>
-          </figure>
-          <div class="wide">
-            <div class="gallery cols-4">
-              <figure>
-                <button class="zoom contain"><img src="../assets/Projects/TheMaw/HP_Bar.gif" alt="Animated HP bar" loading="lazy" width="446" height="100"></button>
-                <figcaption>HP Bar</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom contain"><img src="../assets/Projects/TheMaw/HPOrb.gif" alt="Animated HP orb" loading="lazy" width="272" height="274"></button>
-                <figcaption>HP Orb</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom contain"><img src="../assets/Projects/TheMaw/Weapons.gif" alt="Radial weapon switch animation" loading="lazy" width="290" height="286"></button>
-                <figcaption>Weapon Switch 1</figcaption>
-              </figure>
-              <figure>
-                <button class="zoom contain"><img src="../assets/Projects/TheMaw/Weapons_1.gif" alt="Diamond weapon switch animation" loading="lazy" width="484" height="196"></button>
-                <figcaption>Weapon Switch 2</figcaption>
-              </figure>
-            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="project-section" aria-labelledby="dialogue">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="dialogue">Dialogue</h2>
+      <section class="project-section" aria-labelledby="p-hud2">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="p-hud2">Alternate HUD Direction</h2>
+          </div>
+          <div class="gallery">
+          <figure class="wide">
+            <button class="zoom"><img src="../assets/Projects/TheMaw/HUD_2.gif" alt="Animated alternate HUD with HP orb and radial weapon wheel" loading="lazy" width="1920" height="1080"></button>
+            <figcaption><strong>HUD 2</strong> · In motion</figcaption>
+          </figure>
+          <figure>
+            <button class="zoom contain"><img src="../assets/Projects/TheMaw/HPOrb.gif" alt="Animated HP orb" loading="lazy" width="272" height="274"></button>
+            <figcaption>HP Orb</figcaption>
+          </figure>
+          <figure>
+            <button class="zoom contain"><img src="../assets/Projects/TheMaw/Weapons.gif" alt="Radial weapon wheel animation" loading="lazy" width="290" height="286"></button>
+            <figcaption>Radial Weapon Wheel</figcaption>
+          </figure>
+          </div>
         </div>
-        <div class="gallery">
+      </section>
+
+      <section class="project-section" aria-labelledby="p-dialogue">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="p-dialogue">Dialogue Exploration</h2>
+          </div>
+          <div class="gallery">
           <figure>
             <button class="zoom"><img src="../assets/Projects/TheMaw/web/Static_1.webp" alt="Dialogue layout option 1" loading="lazy" width="1600" height="900"></button>
             <figcaption><strong>Dialogue Layout</strong> · Option 1</figcaption>
@@ -161,19 +205,19 @@
             <figcaption><strong>Dialogue Layout</strong> · Option 4</figcaption>
           </figure>
           <figure class="wide">
-            <button class="zoom"><img src="../assets/Projects/TheMaw/web/Dynamic_Diegetic.webp" alt="Eight dialogue box style variations labelled A through H" loading="lazy" width="1600" height="900"></button>
-            <figcaption><strong>Diegetic Dialogue Boxes</strong> · Style variations A–H</figcaption>
+            <button class="zoom"><img src="../assets/Projects/TheMaw/web/Dynamic_Diegetic.webp" alt="Eight dialogue box style variations labelled A through H" loading="lazy" width="1600" height="1158"></button>
+            <figcaption><strong>Dialogue Box Styles</strong> · A–H (B was used in the final game)</figcaption>
           </figure>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="project-section" aria-labelledby="controls">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="controls">Controls</h2>
-        </div>
-        <div class="gallery">
+      <section class="project-section" aria-labelledby="p-controls">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="p-controls">Controls Screens</h2>
+          </div>
+          <div class="gallery">
           <figure>
             <button class="zoom"><img src="../assets/Projects/TheMaw/web/keyboard_1.webp" alt="Keyboard controls screen, version 1" loading="lazy" width="1600" height="900"></button>
             <figcaption><strong>Keyboard Controls</strong> · Version 1</figcaption>
@@ -190,9 +234,10 @@
             <button class="zoom"><img src="../assets/Projects/TheMaw/web/xbox_controller.webp" alt="Controller layout, version 2" loading="lazy" width="1600" height="900"></button>
             <figcaption><strong>Controller Layout</strong> · Version 2</figcaption>
           </figure>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <div class="wrap">
       <nav class="project-pager" aria-label="More projects">

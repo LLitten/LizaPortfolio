@@ -26,11 +26,36 @@ document.querySelectorAll('.notes-toggle').forEach((btn) => {
   });
 });
 
-// Lightbox for gallery images. Uses data-full on the <img> when present
-// (a larger original), otherwise the image's current src.
-const zooms = [...document.querySelectorAll('.zoom')];
+// Finished work / Process switch. The URL hash (#process) keeps the
+// chosen view linkable.
+const tabs = [...document.querySelectorAll('.view-tabs [role="tab"]')];
 
-if (zooms.length) {
+if (tabs.length) {
+  const select = (view, updateHash) => {
+    tabs.forEach((t) => {
+      const on = t.dataset.view === view;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    document.querySelectorAll('[data-hint]').forEach((h) => { h.hidden = h.dataset.hint !== view; });
+    if (updateHash) history.replaceState(null, '', view === 'process' ? '#process' : location.pathname);
+  };
+
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    select(t.dataset.view, true);
+    document.querySelector('.view-switch').scrollIntoView({ behavior: 'smooth' });
+  }));
+  select(location.hash === '#process' ? 'process' : 'final', false);
+}
+
+// Lightbox for gallery images. Uses data-full on the <img> when present
+// (a larger original), otherwise the image's current src. Only images in
+// the visible view are stepped through.
+const allZooms = [...document.querySelectorAll('.zoom')];
+let zooms = allZooms;
+
+if (allZooms.length) {
   const box = document.createElement('dialog');
   box.className = 'lightbox';
   box.innerHTML = `
@@ -55,7 +80,12 @@ if (zooms.length) {
     boxCap.textContent = cap ? cap.textContent : '';
   };
 
-  zooms.forEach((z, i) => z.addEventListener('click', () => { show(i); box.showModal(); }));
+  allZooms.forEach((z) => z.addEventListener('click', () => {
+    zooms = allZooms.filter((el) => el.offsetParent !== null);
+    box.querySelectorAll('.lb-prev, .lb-next').forEach((btn) => { btn.hidden = zooms.length < 2; });
+    show(zooms.indexOf(z));
+    box.showModal();
+  }));
   box.querySelector('.lb-close').addEventListener('click', () => box.close());
   box.querySelector('.lb-prev').addEventListener('click', () => show(index - 1));
   box.querySelector('.lb-next').addEventListener('click', () => show(index + 1));
@@ -65,6 +95,4 @@ if (zooms.length) {
     if (e.key === 'ArrowRight') show(index + 1);
   });
 
-  // Hide arrows when there's only one image
-  if (zooms.length < 2) box.querySelectorAll('.lb-prev, .lb-next').forEach((b) => b.hidden = true);
 }

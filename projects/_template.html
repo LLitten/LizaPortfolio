@@ -34,6 +34,11 @@
     3. Put images in assets/Projects/<ProjectName>/ and web-sized copies
        (WebP, max 1600px wide) in assets/Projects/<ProjectName>/web/.
     4. Delete any optional blocks you don't need.
+    5. Finished work goes in #panel-final (shown by default); concepts,
+       mockups, iterations and annotated versions go in #panel-process.
+       Linking to the page with #process on the end opens the Process view.
+       If a project has no process material, delete the .view-switch bar
+       and the process panel, and keep the final panel's sections.
 
     Gallery building blocks (mix freely inside a .gallery):
       .gallery            2 columns (default)
@@ -75,61 +80,95 @@
         <div class="project-cover">
           <img src="../assets/Projects/PROJECTNAME/web/COVER.webp" alt="DESCRIBE THE COVER IMAGE" width="1600" height="900">
         </div>
+        <!-- for a portrait or odd-shaped cover that shouldn't be cropped, use:
+        <figure class="project-cover contain"><img src="..." alt="..." width="W" height="H"></figure> -->
       </div>
     </header>
 
-    <!-- optional: trailer / gameplay video -->
-    <section class="project-section" aria-labelledby="trailer">
+    <!-- Finished Work / Process switch -->
+    <div class="view-switch">
       <div class="wrap">
-        <div class="section-head">
-          <h2 id="trailer">Gameplay</h2>
+        <div class="view-tabs" role="tablist" aria-label="Project view">
+          <button role="tab" id="tab-final" data-view="final" aria-controls="panel-final" aria-selected="true">Finished Work</button>
+          <button role="tab" id="tab-process" data-view="process" aria-controls="panel-process" aria-selected="false" tabindex="-1">Process</button>
         </div>
-        <div class="video-embed">
-          <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="PROJECT NAME gameplay video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
-        </div>
+        <p class="view-hint" data-hint="final">Final assets as they appeared in the game.</p>
+        <p class="view-hint" data-hint="process" hidden>Concepts, mockups and iterations.</p>
       </div>
-    </section>
+    </div>
 
-    <!-- gallery section: repeat for each group of work -->
-    <section class="project-section" aria-labelledby="section-1">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="section-1">SECTION TITLE</h2>
-          <!-- optional: only if images below have data-noted versions -->
-          <button class="notes-toggle" aria-pressed="false"><span class="switch" aria-hidden="true"></span> Show design notes</button>
+    <!-- FINISHED WORK -->
+    <div class="view-panel" id="panel-final" role="tabpanel" aria-labelledby="tab-final">
+      <!-- optional: trailer / gameplay video -->
+      <section class="project-section" aria-labelledby="trailer">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="trailer">Gameplay</h2>
+          </div>
+          <div class="video-embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="PROJECT NAME gameplay video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+          </div>
         </div>
-        <!-- optional: <p class="section-intro">SHORT CONTEXT FOR THIS SECTION.</p> -->
-        <div class="gallery">
-          <figure>
-            <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
-            <figcaption><strong>CAPTION</strong> · DETAIL</figcaption>
-          </figure>
-          <figure>
-            <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/IMAGE.webp" data-noted="../assets/Projects/PROJECTNAME/web/IMAGE_NOTED.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
-            <figcaption><strong>CAPTION</strong> · DETAIL</figcaption>
-          </figure>
-          <figure class="wide">
-            <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/WIDE_IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
-            <figcaption><strong>CAPTION</strong></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- gallery of small assets (sprites, icons, props) -->
-    <section class="project-section" aria-labelledby="section-2">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="section-2">SECTION TITLE</h2>
+      <!-- gallery section: repeat for each group of work -->
+      <section class="project-section" aria-labelledby="section-1">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="section-1">SECTION TITLE</h2>
+          </div>
+          <!-- optional: <p class="section-intro">SHORT CONTEXT FOR THIS SECTION.</p> -->
+          <div class="gallery">
+            <figure>
+              <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
+              <figcaption><strong>CAPTION</strong> · DETAIL</figcaption>
+            </figure>
+            <figure>
+              <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
+              <figcaption><strong>CAPTION</strong> · DETAIL</figcaption>
+            </figure>
+            <figure class="wide">
+              <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/WIDE_IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
+              <figcaption><strong>CAPTION</strong></figcaption>
+            </figure>
+          </div>
         </div>
-        <div class="gallery cols-4">
-          <figure>
-            <button class="zoom contain"><img src="../assets/Projects/PROJECTNAME/SPRITE.gif" alt="DESCRIBE ASSET" loading="lazy" width="WIDTH" height="HEIGHT"></button>
-            <figcaption>CAPTION</figcaption>
-          </figure>
+      </section>
+
+      <!-- gallery of small assets (sprites, icons, props) -->
+      <section class="project-section" aria-labelledby="section-2">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="section-2">SECTION TITLE</h2>
+          </div>
+          <div class="gallery cols-4">
+            <figure>
+              <button class="zoom contain"><img src="../assets/Projects/PROJECTNAME/SPRITE.gif" alt="DESCRIBE ASSET" loading="lazy" width="WIDTH" height="HEIGHT"></button>
+              <figcaption>CAPTION</figcaption>
+            </figure>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="view-panel" id="panel-process" role="tabpanel" aria-labelledby="tab-process" hidden>
+      <section class="project-section" aria-labelledby="p-section-1">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="p-section-1">PROCESS SECTION TITLE</h2>
+            <!-- optional: only if images below have data-noted versions -->
+            <button class="notes-toggle" aria-pressed="false"><span class="switch" aria-hidden="true"></span> Show design notes</button>
+          </div>
+          <div class="gallery">
+            <figure>
+              <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/MOCKUP.webp" data-noted="../assets/Projects/PROJECTNAME/web/MOCKUP_NOTED.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
+              <figcaption><strong>CAPTION</strong> · Version 1</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <div class="wrap">
       <nav class="project-pager" aria-label="More projects">
