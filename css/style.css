@@ -545,12 +545,6 @@ a { color: inherit; }
   margin-top: auto;
 }
 
-.card-body .more {
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--purple);
-}
-
 /* ---------- Footer ---------- */
 
 .site-footer {
