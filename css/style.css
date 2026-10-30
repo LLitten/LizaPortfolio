@@ -792,6 +792,9 @@ a { color: inherit; }
 
 .zoom.pixel img { image-rendering: pixelated; }
 
+/* portrait piece shown beside a poster: same frame shape, no padding */
+.zoom.contain.match-poster { aspect-ratio: 848 / 1200; padding: 0; }
+
 .gallery figcaption {
   margin-top: 10px;
   font-size: 0.9rem;
