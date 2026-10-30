@@ -104,3 +104,70 @@ if (allZooms.length) {
   });
 
 }
+
+// Process videos on the Art page. data-video is "youtube:ID" or "drive:ID".
+const videoBtns = document.querySelectorAll('[data-video]');
+
+if (videoBtns.length) {
+  const vbox = document.createElement('dialog');
+  vbox.className = 'video-box';
+  vbox.innerHTML = `
+    <div class="video-frame"></div>
+    <div class="video-bar"><span class="vb-title"></span><button class="vb-close">Close ✕</button></div>`;
+  document.body.append(vbox);
+  const frame = vbox.querySelector('.video-frame');
+
+  const close = () => { vbox.close(); };
+  vbox.addEventListener('close', () => { frame.innerHTML = ''; });
+  vbox.querySelector('.vb-close').addEventListener('click', close);
+  vbox.addEventListener('click', (e) => { if (e.target === vbox) close(); });
+
+  videoBtns.forEach((btn) => btn.addEventListener('click', () => {
+    const [host, id] = btn.dataset.video.split(':');
+    const src = host === 'youtube'
+      ? `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`
+      : `https://drive.google.com/file/d/${id}/preview`;
+    const title = btn.dataset.title || 'Process video';
+    frame.innerHTML = `<iframe src="${src}" title="${title}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+    vbox.querySelector('.vb-title').textContent = title;
+    vbox.showModal();
+  }));
+}
+
+// Art masonry: deal pieces left to right into the shortest column so the
+// newest-first order reads across rows. Heights come from each image's
+// width/height attributes, so this works before the images load.
+const artGrid = document.querySelector('.art-grid');
+
+if (artGrid) {
+  const pieces = [...artGrid.querySelectorAll('.art-piece')];
+  let current = 0;
+
+  const layout = () => {
+    const width = artGrid.clientWidth;
+    const count = width >= 900 ? 3 : width >= 560 ? 2 : 1;
+    if (count === current) return;
+    current = count;
+
+    const cols = Array.from({ length: count }, () => {
+      const col = document.createElement('div');
+      col.className = 'art-col';
+      return col;
+    });
+    const heights = new Array(count).fill(0);
+
+    pieces.forEach((piece) => {
+      const img = piece.querySelector('img');
+      const ratio = img.getAttribute('height') / img.getAttribute('width');
+      const i = heights.indexOf(Math.min(...heights));
+      cols[i].append(piece);
+      heights[i] += ratio + 0.15; // + caption allowance
+    });
+
+    artGrid.replaceChildren(...cols);
+    artGrid.classList.add('is-masonry');
+  };
+
+  layout();
+  window.addEventListener('resize', layout);
+}
