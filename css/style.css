@@ -645,6 +645,10 @@ a { color: inherit; }
   background: radial-gradient(circle at 50% 40%, var(--surface-2), var(--bg-deep) 75%);
 }
 
+.project-cover.contain.logo { min-height: clamp(260px, 36vw, 440px); }
+
+.project-cover.contain.logo img { width: min(60%, 320px); }
+
 .project-cover.contain img {
   width: auto;
   max-height: min(78vh, 760px);
@@ -791,6 +795,9 @@ a { color: inherit; }
 .zoom.contain img { width: auto; max-height: 100%; object-fit: contain; }
 
 .zoom.pixel img { image-rendering: pixelated; }
+
+/* light panel for dark-on-transparent artwork (e.g. a black logo) */
+.zoom.contain.light { background: #e9e5ee; }
 
 /* portrait piece shown beside a poster: same frame shape, no padding */
 .zoom.contain.match-poster { aspect-ratio: 848 / 1200; padding: 0; }
