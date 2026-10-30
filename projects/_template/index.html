@@ -8,21 +8,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=202610302249">
+  <link rel="stylesheet" href="../../css/style.css?v=202610302249">
 </head>
 <body>
 
   <nav class="site-nav" aria-label="Main">
     <div class="wrap">
-      <a href="../index.html" class="brand">Liza “Zai” Litten</a>
+      <a href="../../" class="brand">Liza “Zai” Litten</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../ui.html">UI</a></li>
-        <li><a href="../props.html">Prop Art</a></li>
-        <li><a href="../art.html">Illustrations</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../assets/Resume/Litten_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a></li>
+        <li><a href="../../">Home</a></li>
+        <li><a href="../../ui/">UI</a></li>
+        <li><a href="../../prop-art/">Prop Art</a></li>
+        <li><a href="../../illustrations/">Illustrations</a></li>
+        <li><a href="../../about/">About</a></li>
+        <li><a href="../../assets/Resume/Litten_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a></li>
       </ul>
     </div>
   </nav>
@@ -30,7 +30,8 @@
   <!--
     PROJECT PAGE TEMPLATE
     =====================
-    1. Copy this file to projects/<project-name>.html (lowercase, hyphens).
+    1. Copy this folder to projects/<project-name>/ (lowercase, hyphens);
+       the page is its index.html, so the URL is /projects/<project-name>/.
     2. Replace every ALL-CAPS placeholder below.
     3. Put images in assets/Projects/<ProjectName>/ and web-sized copies
        (WebP, max 1600px wide) in assets/Projects/<ProjectName>/web/.
@@ -48,15 +49,15 @@
       <button class="zoom">              click-to-enlarge image
       <button class="zoom contain">      small asset centred on a panel (icons, sprites, UI pieces)
       <button class="zoom contain pixel"> same, but keeps pixel art crisp
-      <img ... data-noted="annotated.webp">  annotated version for the "Show design notes" switch
-      <img ... data-full="original.png">     larger file to show in the lightbox
+      <img ... data-noted="../annotated.webp">  annotated version for the "Show design notes" switch
+      <img ... data-full="../original.png">     larger file to show in the lightbox
   -->
 
   <main>
 
     <header class="project-hero">
       <div class="wrap">
-        <a href="../index.html#projects" class="back-link"><span aria-hidden="true">←</span> All projects</a>
+        <a href="../../#projects" class="back-link"><span aria-hidden="true">←</span> All projects</a>
 
         <div class="project-head">
           <div>
@@ -79,10 +80,10 @@
         </dl>
 
         <div class="project-cover">
-          <img src="../assets/Projects/PROJECTNAME/web/COVER.webp" alt="DESCRIBE THE COVER IMAGE" width="1600" height="900">
+          <img src="../../assets/Projects/PROJECTNAME/web/COVER.webp" alt="DESCRIBE THE COVER IMAGE" width="1600" height="900">
         </div>
         <!-- for a portrait or odd-shaped cover that shouldn't be cropped, use:
-        <figure class="project-cover contain"><img src="..." alt="..." width="W" height="H"></figure> -->
+        <figure class="project-cover contain"><img src="../..." alt="..." width="W" height="H"></figure> -->
       </div>
     </header>
 
@@ -121,15 +122,15 @@
           <!-- optional: <p class="section-intro">SHORT CONTEXT FOR THIS SECTION.</p> -->
           <div class="gallery">
             <figure>
-              <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
+              <button class="zoom"><img src="../../assets/Projects/PROJECTNAME/web/IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
               <figcaption><strong>CAPTION</strong> · DETAIL</figcaption>
             </figure>
             <figure>
-              <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
+              <button class="zoom"><img src="../../assets/Projects/PROJECTNAME/web/IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
               <figcaption><strong>CAPTION</strong> · DETAIL</figcaption>
             </figure>
             <figure class="wide">
-              <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/WIDE_IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
+              <button class="zoom"><img src="../../assets/Projects/PROJECTNAME/web/WIDE_IMAGE.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
               <figcaption><strong>CAPTION</strong></figcaption>
             </figure>
           </div>
@@ -144,7 +145,7 @@
           </div>
           <div class="gallery cols-4">
             <figure>
-              <button class="zoom contain"><img src="../assets/Projects/PROJECTNAME/SPRITE.gif" alt="DESCRIBE ASSET" loading="lazy" width="WIDTH" height="HEIGHT"></button>
+              <button class="zoom contain"><img src="../../assets/Projects/PROJECTNAME/SPRITE.gif" alt="DESCRIBE ASSET" loading="lazy" width="WIDTH" height="HEIGHT"></button>
               <figcaption>CAPTION</figcaption>
             </figure>
           </div>
@@ -163,7 +164,7 @@
           </div>
           <div class="gallery">
             <figure>
-              <button class="zoom"><img src="../assets/Projects/PROJECTNAME/web/MOCKUP.webp" data-noted="../assets/Projects/PROJECTNAME/web/MOCKUP_NOTED.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
+              <button class="zoom"><img src="../../assets/Projects/PROJECTNAME/web/MOCKUP.webp" data-noted="../../assets/Projects/PROJECTNAME/web/MOCKUP_NOTED.webp" alt="DESCRIBE IMAGE" loading="lazy" width="1600" height="900"></button>
               <figcaption><strong>CAPTION</strong> · Version 1</figcaption>
             </figure>
           </div>
@@ -173,8 +174,8 @@
 
     <div class="wrap">
       <nav class="project-pager" aria-label="More projects">
-        <a class="pager-link prev" href="PREVIOUS.html"><span>← Previous</span><strong>PREVIOUS PROJECT</strong></a>
-        <a class="pager-link next" href="NEXT.html"><span>Next →</span><strong>NEXT PROJECT</strong></a>
+        <a class="pager-link prev" href="../PREVIOUS/"><span>← Previous</span><strong>PREVIOUS PROJECT</strong></a>
+        <a class="pager-link next" href="../NEXT/"><span>Next →</span><strong>NEXT PROJECT</strong></a>
       </nav>
     </div>
 
@@ -206,6 +207,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=202610302249"></script>
+  <script src="../../js/main.js?v=202610302249"></script>
 </body>
 </html>
