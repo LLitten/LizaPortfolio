@@ -986,8 +986,9 @@ a { color: inherit; }
 
 .art-piece { margin: 0; }
 
-/* square tiles, like ArtStation; the full piece opens in the lightbox */
-.art-piece .zoom { aspect-ratio: 1 / 1; }
+/* 5:6 tiles: the median shape of the pieces, so most show uncropped.
+   The full piece always opens in the lightbox. */
+.art-piece .zoom { aspect-ratio: 5 / 6; }
 
 .art-piece .zoom img {
   width: 100%;
