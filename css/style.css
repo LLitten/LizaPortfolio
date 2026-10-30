@@ -314,21 +314,6 @@ a { color: inherit; }
   filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.6));
 }
 
-.feature-badge {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  background: var(--red);
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 6px 12px;
-  border-radius: 999px;
-  transform: rotate(-3deg);
-}
-
 .feature-body {
   padding: clamp(24px, 3.5vw, 40px);
   display: flex;
@@ -543,6 +528,26 @@ a { color: inherit; }
   padding-top: 12px;
   border-top: 1px dashed var(--border);
   margin-top: auto;
+}
+
+.card-body .more {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.2s, border-color 0.2s, gap 0.2s;
+}
+
+.project-card:hover .more {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+  gap: 12px;
 }
 
 /* ---------- Footer ---------- */
