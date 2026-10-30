@@ -105,7 +105,7 @@ if (allZooms.length) {
 
 }
 
-// Process videos on the Art page. data-video is "youtube:ID" or "drive:ID".
+// Time-lapse videos on the Art page. data-video is "youtube:ID" or "drive:ID".
 const videoBtns = document.querySelectorAll('[data-video]');
 
 if (videoBtns.length) {
@@ -127,7 +127,7 @@ if (videoBtns.length) {
     const src = host === 'youtube'
       ? `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`
       : `https://drive.google.com/file/d/${id}/preview`;
-    const title = btn.dataset.title || 'Process video';
+    const title = btn.dataset.title || 'Time-lapse';
     frame.innerHTML = `<iframe src="${src}" title="${title}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
     vbox.querySelector('.vb-title').textContent = title;
     vbox.showModal();
