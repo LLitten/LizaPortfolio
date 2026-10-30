@@ -42,9 +42,17 @@ if (tabs.length) {
     if (updateHash) history.replaceState(null, '', view === 'process' ? '#process' : location.pathname);
   };
 
+  // Where the switch bar sits before it sticks (just below the hero).
+  const hero = document.querySelector('.project-hero');
+  const navHeight = document.querySelector('.site-nav')?.offsetHeight || 0;
+
   tabs.forEach((t) => t.addEventListener('click', () => {
+    const barTop = hero.offsetTop + hero.offsetHeight - navHeight;
+    const scrolledPast = window.scrollY > barTop;
     select(t.dataset.view, true);
-    document.querySelector('.view-switch').scrollIntoView({ behavior: 'smooth' });
+    // Only if the reader is already below the bar: jump back so the new
+    // view starts right under it. Otherwise leave the scroll alone.
+    if (scrolledPast) window.scrollTo({ top: barTop, behavior: 'instant' });
   }));
   select(location.hash === '#process' ? 'process' : 'final', false);
 }
