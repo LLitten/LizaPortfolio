@@ -759,6 +759,8 @@ a { color: inherit; }
 }
 
 .gallery.cols-1 { grid-template-columns: 1fr; }
+.gallery.single { grid-template-columns: 1fr; max-width: 760px; margin-inline: auto; }
+.gallery.compact { max-width: 760px; margin-inline: auto; }
 .gallery.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .gallery.cols-4 { grid-template-columns: repeat(4, 1fr); }
 
