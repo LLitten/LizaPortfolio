@@ -825,7 +825,7 @@ a { color: inherit; }
 .zoom.contain.light { background: #e9e5ee; }
 
 /* portrait piece shown beside a poster: same frame shape, no padding */
-.zoom.contain.match-poster { aspect-ratio: 848 / 1200; }
+.zoom.contain.match-poster { aspect-ratio: 848 / 1200; background: #808080; }
 .zoom.contain.match-poster img { inset: 0; width: 100%; height: 100%; object-fit: contain; }
 
 .gallery figcaption {
