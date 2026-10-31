@@ -1368,3 +1368,32 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* case-study facts under the project intro */
+.case-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 32px;
+  margin: 0 0 clamp(28px, 4vw, 44px);
+  max-width: 980px;
+}
+
+.case-facts dt {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+
+.case-facts dd { margin: 0; color: var(--text-soft); }
+
+@media (max-width: 720px) {
+  .case-facts { grid-template-columns: 1fr; }
+}
+
+.project-cover figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

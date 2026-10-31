@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.css?v=202610310514">
+  <link rel="stylesheet" href="../../css/style.css?v=202610312330">
 </head>
 <body>
 
@@ -55,8 +55,16 @@
           <a class="text-link" href="https://13wham.com/news/local/make-a-wish-partners-with-rit-to-make-teens-dream-come-true-henrietta-rit-magic-spell-studios-video-game-wishathon-make-a-wish-western-new-york" target="_blank" rel="noopener">Read the 13WHAM story <span aria-hidden="true">↗</span></a>
         </aside>
 
+        <dl class="case-facts">
+          <div><dt>My role</dt><dd>I designed the game’s UI in Figma, and my mockups became the final in-game assets; the programming team implemented them in engine. I worked with Caleb and the project’s art director, who had already set a vision board and early draft assets when I joined.</dd></div>
+          <div><dt>The goal</dt><dd>UI that’s easy to read in fast-paced combat while still showing everything the player needs.</dd></div>
+          <div><dt>The style</dt><dd>Rudimentary tech scavenged from the Maw itself: bone, scrap and simple metal. The vision board pulled from apocalyptic settings, earthy and fishlike textures, primitive body augmentation and a touch of Borderlands.</dd></div>
+          <div><dt>The constraint</dt><dd>A strict deadline for the whole project meant features were cut, so the UI was trimmed down to the essentials.</dd></div>
+        </dl>
+
         <figure class="project-cover contain">
           <img src="../../assets/Projects/TheMaw/web/FinalTitleScreen.webp" alt="Final title screen: a towering, tooth-lined spire rising from jagged rock, painted in greyscale" width="685" height="837">
+          <figcaption>The game’s key art, shown for context (not my work).</figcaption>
         </figure>
       </div>
     </header>
@@ -78,6 +86,7 @@
           <div class="section-head">
             <h2 id="final-hud">HUD</h2>
           </div>
+          <p class="section-intro">Everything sits along the bottom of the screen. During combat that area is usually just floor, so the HUD stays readable without covering the action.</p>
           <div class="gallery cols-1">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/TheMaw/HUD_1.gif" alt="Final HUD in motion: HP bar bottom left, diamond weapon selector bottom right" loading="lazy" width="1920" height="1080"></button>
@@ -92,6 +101,7 @@
           <div class="section-head">
             <h2 id="final-hud-elements">HUD Elements</h2>
           </div>
+          <p class="section-intro"><strong>HP bar:</strong> each hit animates the chunk of health just lost, so players notice damage the moment it happens instead of discovering it later. <strong>Weapon selector:</strong> players carry two weapons and swap with one button. The large diamond is the active weapon and the small one is held; the angular, sheet-metal shapes match the harsher side of the scavenged-tech style.</p>
           <div class="gallery">
           <figure>
             <button class="zoom contain"><img src="../../assets/Projects/TheMaw/HP_Bar.gif" alt="Animated HP bar" loading="lazy" width="446" height="100"></button>
@@ -110,6 +120,7 @@
           <div class="section-head">
             <h2 id="final-dialogue">Dialogue Box</h2>
           </div>
+          <p class="section-intro">Torn edges and a smudged name plate. Out of eight material styles, this one was chosen because it read the most like rusted metal.</p>
           <div class="gallery cols-1">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/TheMaw/web/Dialogue_StyleB.webp" alt="Final dialogue box: dark grey box with ragged, torn edges and a smudged name plate" loading="lazy" width="740" height="300"></button>
@@ -127,6 +138,7 @@
             <h2 id="p-title">Title Screen Concepts</h2>
           <button class="notes-toggle" aria-pressed="false"><span class="switch" aria-hidden="true"></span> Show design notes</button>
           </div>
+          <p class="section-intro">Two title screen concepts. Neither was used: the final game went with existing key art and the engine’s default menu.</p>
           <div class="gallery">
           <figure>
             <button class="zoom"><img src="../../assets/Projects/TheMaw/web/Title1_NoNotes.webp" data-noted="../../assets/Projects/TheMaw/web/Title1_Noted.webp" alt="Title screen concept 1" loading="lazy" width="1600" height="900"></button>
@@ -146,6 +158,7 @@
             <h2 id="p-hud">HUD Mockups</h2>
           <button class="notes-toggle" aria-pressed="false"><span class="switch" aria-hidden="true"></span> Show design notes</button>
           </div>
+          <p class="section-intro">I designed HUD 1 and HUD 2 at the same time as opposing directions, so the team could compare real alternatives rather than watch one idea get reshaped into another. Most feedback was about trimming: as features were cut, the elements that supported them went too.</p>
           <div class="gallery">
           <figure>
             <button class="zoom"><img src="../../assets/Projects/TheMaw/web/HUD1_V1_Noted.webp" alt="HUD 1, version 1 wireframe with annotations" loading="lazy" width="1600" height="900"></button>
@@ -172,6 +185,7 @@
           <div class="section-head">
             <h2 id="p-hud2">Alternate HUD Direction</h2>
           </div>
+          <p class="section-intro">The rounded direction drew on the liquids that enhance characters in the story and on natural, circular forms; the radial wheel was meant to read like a utility belt. The team chose the diamond direction, with its harsher sheet-metal shapes, for the final game.</p>
           <div class="gallery">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/TheMaw/HUD_2.gif" alt="Animated alternate HUD with HP orb and radial weapon wheel" loading="lazy" width="1920" height="1080"></button>
@@ -194,6 +208,7 @@
           <div class="section-head">
             <h2 id="p-dialogue">Dialogue Exploration</h2>
           </div>
+          <p class="section-intro">The layouts explored where dialogue could live: <strong>static</strong> boxes stay fixed on screen, <strong>dynamic</strong> boxes move around the screen but always face the player, and <strong>diegetic</strong> boxes sit in the 3D world and turn with the camera. Styles A–H then tested materials.</p>
           <div class="gallery">
           <figure>
             <button class="zoom"><img src="../../assets/Projects/TheMaw/web/Static_1.webp" alt="Dialogue layout option 1" loading="lazy" width="1600" height="900"></button>
@@ -224,6 +239,7 @@
           <div class="section-head">
             <h2 id="p-controls">Controls Screens</h2>
           </div>
+          <p class="section-intro">The keyboard versions compare jagged-metal keys with smoother ones. The controller versions compare describing each action in text with pointing straight to the button for each action.</p>
           <div class="gallery">
           <figure>
             <button class="zoom"><img src="../../assets/Projects/TheMaw/web/keyboard_1.webp" alt="Keyboard controls screen, version 1" loading="lazy" width="1600" height="900"></button>
@@ -245,6 +261,15 @@
         </div>
       </section>
     </div>
+
+    <section class="project-section" aria-labelledby="takeaways">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="takeaways">What I Learned</h2>
+        </div>
+        <p class="section-intro">The Maw taught me to design UI with the whole game in mind: how each element connects to systems outside the interface, and how a cut feature ripples into the screens around it. Next time, I’d push out more variations of each HUD before narrowing down.</p>
+      </div>
+    </section>
 
     <div class="wrap">
       <nav class="project-pager" aria-label="More projects">
