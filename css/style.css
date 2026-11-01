@@ -1397,3 +1397,31 @@ a { color: inherit; }
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+/* case-study intro: facts beside a smaller key-art image */
+.case-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+  margin: 0 0 clamp(28px, 4vw, 44px);
+}
+
+.case-intro .case-facts { grid-template-columns: 1fr; margin: 0; }
+
+.case-art { margin: 0; }
+
+.case-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 800px) {
+  .case-intro { grid-template-columns: 1fr; }
+  .case-art img { max-height: 420px; width: auto; max-width: 100%; margin: 0 auto; }
+}
