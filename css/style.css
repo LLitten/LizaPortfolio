@@ -746,7 +746,6 @@ a { color: inherit; }
 .section-intro {
   margin: -6px 0 24px;
   color: var(--text-soft);
-  max-width: 64ch;
 }
 
 /* video embed */
