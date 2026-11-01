@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.css?v=202610310514">
+  <link rel="stylesheet" href="../../css/style.css?v=202611010100">
 </head>
 <body>
 
@@ -52,9 +52,17 @@
           <div><dt>Dev Time</dt><dd>4 weeks</dd></div>
         </dl>
 
-        <figure class="project-cover">
+        <div class="case-intro">
+        <dl class="case-facts">
+          <div><dt>The brief</dt><dd>A class project with the prompt “RPG”: a 4-week, 5-person fan game based on Arknights: Endfield.</dd></div>
+          <div><dt>My role</dt><dd>I designed the combat UI layout and created the UI art; the assets on this page are the final ones used in the game. The team implemented them in engine.</dd></div>
+          <div><dt>The style</dt><dd>Built on Endfield’s existing UI. Most components, including the skill circles and character background bubbles, were recreated directly from the original game, and new assets were made to match. The combat layout and the login and save screens are custom to this project.</dd></div>
+          <div><dt>The challenge</dt><dd>Understanding the core of Endfield’s design language: clean edges and angles, and knowing when to use sharp shapes versus circles.</dd></div>
+        </dl>
+        <figure class="case-art">
           <img src="../../assets/Projects/Endmon/web/akr0eR.webp" alt="Endmon title screen: a character silhouette filled with pixel art behind the Endmon logo on a yellow band" width="1600" height="900">
         </figure>
+        </div>
       </div>
     </header>
 
@@ -69,21 +77,43 @@
       </div>
     </section>
 
-    <section class="project-section" aria-labelledby="ui">
+    <section class="project-section" aria-labelledby="battle">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="ui">UI Design</h2>
+          <h2 id="battle">Battle &amp; Crafting UI</h2>
         </div>
-        <div class="gallery">
-          <figure class="wide">
-            <button class="zoom"><img src="../../assets/Projects/Endmon/web/Group_13.webp" alt="Load Game and New Game menus with save slots, buttons and controller icons" loading="lazy" width="1600" height="900"></button>
-            <figcaption><strong>Menus</strong> · Load game, new game and button set</figcaption>
-          </figure>
+        <p class="section-intro">The combat HUD sits along the bottom of the screen because the background art places the characters in the middle. It reads left to right, the way you read: pick a character, choose their ability, then act.</p>
+        <p class="section-intro">The skills started as a single list, laid out either horizontally or vertically, and became a 2×2 grid with the description beside it. The energy bar along the bottom was added after players couldn’t tell how much energy they had left; originally it was just a number in the corner.</p>
+        <div class="gallery cols-1">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/Endmon/web/Group_14.webp" alt="Battle and crafting interface pieces including skill buttons, progress bars and a GO button" loading="lazy" width="1600" height="900"></button>
             <figcaption><strong>Battle &amp; Crafting UI</strong> · Skills, progress bars and controls</figcaption>
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="menus">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="menus">Menus</h2>
+        </div>
+        <p class="section-intro">The load and new game screens are custom to this project, with a button set covering neutral and pressed/active states.</p>
+        <div class="gallery cols-1">
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/Endmon/web/Group_13.webp" alt="Load Game and New Game menus with save slots, buttons and controller icons" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Menus</strong> · Load game, new game and button set</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="takeaways">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="takeaways">What I Learned</h2>
+        </div>
+        <p class="section-intro">Endmon taught me to streamline my process and to organize Figma for a larger project with many screens and components.</p>
       </div>
     </section>
 
