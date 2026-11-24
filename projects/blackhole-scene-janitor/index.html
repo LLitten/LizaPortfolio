@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackhole Scene Janitor — Liza "Zai" Litten</title>
+  <meta name="description" content="Blackhole Scene Janitor, made for the Epic AI MegaJam 2026. UI design and direction by Liza &quot;Zai&quot; Litten.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css?v=202611040100">
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main">
+    <div class="wrap">
+      <a href="../../" class="brand">Liza “Zai” Litten</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../../">Home</a></li>
+        <li><a href="../../ui/">UI</a></li>
+        <li><a href="../../prop-art/">Prop Art</a></li>
+        <li><a href="../../illustrations/">Illustrations</a></li>
+        <li><a href="../../about/">About</a></li>
+        <li><a href="../../assets/Resume/Litten_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="project-hero">
+      <div class="wrap">
+        <a href="../../#projects" class="back-link"><span aria-hidden="true">←</span> All projects</a>
+
+        <div class="project-head">
+          <div>
+            <p class="eyebrow">Space Salvage Sim</p>
+            <h1>Blackhole Scene Janitor</h1>
+          </div>
+          <div>
+            <p class="project-lede">You are a salvage pilot paying off a huge debt. Gather space junk, tow it to the black hole and let it fall in. Every load pays credits and feeds the black hole, which grows through five stages. The run ends when the black hole matures.</p>
+            <div class="project-links">
+              <a href="https://weijieye.itch.io/blackhole-scene-janitor" class="btn btn-primary" target="_blank" rel="noopener">Play on itch.io ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <dl class="stat-row">
+          <div><dt>Role</dt><dd>UI Designer &amp; Design Lead</dd></div>
+          <div><dt>Team Size</dt><dd>7</dd></div>
+          <div><dt>Dev Time</dt><dd>4 days</dd></div>
+        </dl>
+
+        <div class="case-intro">
+        <dl class="case-facts">
+          <div><dt>My role</dt><dd>Made for the Epic AI MegaJam 2026, where AI tools were part of the brief. I was the UI designer and decision-maker: I set the direction and the design rules, picked every screen’s direction from AI-generated options, and gave the art-direction notes behind each revision. I laid out the 63-node upgrade tree myself and gathered requirements from the lead and casino programmers. AI built the mockups and the first in-engine HUD and wrote the handoff documents; the lead programmer finished the implementation.</dd></div>
+          <div><dt>The direction</dt><dd>Original holographic sci-fi, projected around the ship rather than mounted in a cockpit, since the game is third person. Thin lines, translucent panels, one cool colour plus one warm alert colour, and condensed technical type.</dd></div>
+          <div><dt>The rules</dt><dd>No heavy frames or boxes, following the art director’s preference from working on and playing sci-fi games. Dark glass backings with a single hairline only where the bright black hole disk made text hard to read. Menus are mouse-driven with no keyboard hints, because the keybinds kept changing during the jam.</dd></div>
+        </dl>
+        <figure class="case-art">
+          <img src="../../assets/Projects/BlackholeSceneJanitor/web/cover.webp" alt="Blackhole Scene Janitor cover art: a salvage ship towing debris toward a glowing black hole" width="630" height="500">
+        </figure>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-section" aria-labelledby="hud">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="hud">HUD</h2>
+        </div>
+        <p class="section-intro">Everything the player checks constantly stays near the centre: boost and trash hold sit at the bottom centre, and the weapon sits in the bottom-left corner. Inventory is on the left and status on the right, combo icons sit centred under their ring, and the magnet meter sits bottom-right beside the chain and suction controls it belongs to.</p>
+        <p class="section-intro">Once the layout was chosen, I stress-tested it with worst-case late-game numbers: the longest object names, the highest HP values and a full drone list. That pass led to very specific fixes rather than a redesign, such as trimming the right-hand list to the station, treasure house and drones.</p>
+        <div class="gallery cols-1">
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/hud_start.webp" alt="In-game HUD at the start of a run with the movement tutorial prompt" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Start of a run</strong> · In-game, with the movement prompt</figcaption>
+          </figure>
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/hud_combat.webp" alt="In-game HUD while cutting a Cryo Waste Canister, showing the target HP readout" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Salvaging</strong> · Target readout while cutting a canister</figcaption>
+          </figure>
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/hud_busy.webp" alt="In-game HUD at black hole stage 2 of 5 with the casino nearby" loading="lazy" width="1600" height="891"></button>
+            <figcaption><strong>Stage 2 of 5</strong> · A busier scene, in-game</figcaption>
+          </figure>
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/hud_noescape.webp" alt="In-game NO ESCAPE warning as the ship nears the black hole" loading="lazy" width="1600" height="875"></button>
+            <figcaption><strong>No Escape</strong> · The warm alert colour in use, in-game</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="menus">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="menus">Menus &amp; Settings</h2>
+        </div>
+        <p class="section-intro">Fonts were split by job: Saira Condensed for the title, Barlow Light for menus and Roboto for the HUD. Menu actions are text links rather than buttons, keeping to the no-heavy-frames rule.</p>
+        <div class="gallery cols-1">
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/menu.webp" alt="In-game main menu with the title over the black hole" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Main menu</strong> · In-game</figcaption>
+          </figure>
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/settings.webp" alt="In-game settings screen on the Controls tab" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Settings</strong> · Controls tab, in-game</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="upgrades">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="upgrades">Upgrades</h2>
+        </div>
+        <p class="section-intro">I laid out the final node positions for the 63-node upgrade tree by hand.</p>
+        <div class="gallery cols-1">
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/upgrades.webp" alt="In-game upgrade tree with the Magnetic Propulsion panel open" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Upgrade tree</strong> · Magnetic Propulsion selected, in-game</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="casino">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="casino">Casino</h2>
+        </div>
+        <p class="section-intro">Out of eight casino directions I picked “Pure type” for the menu and the Appraiser’s Wheel, and “One big number” for the Lucky Machine, so the result is the first thing you read. Every casino screen shares one layout: title top-left, an action column on the left and the visual on the right.</p>
+        <div class="gallery cols-1">
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/casino_wheel.webp" alt="In-game Appraiser’s Wheel casino screen" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Appraiser’s Wheel</strong> · In-game</figcaption>
+          </figure>
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/casino_lucky.webp" alt="In-game Lucky Machine showing one large result and the last 12 coins" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>Lucky Machine</strong> · With the last 12 coins, in-game</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="ending">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="ending">End Screen</h2>
+        </div>
+        <p class="section-intro">For the ending I chose the “Held last frame” direction: the screen holds on the final view of the matured black hole, with the run’s stats laid out beneath it in the same thin type.</p>
+        <div class="gallery cols-1">
+          <figure class="wide">
+            <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/end.webp" alt="In-game end screen reading The black hole has matured, with run stats" loading="lazy" width="1600" height="900"></button>
+            <figcaption><strong>End screen</strong> · In-game</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="takeaways">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="takeaways">What I Learned</h2>
+        </div>
+        <p class="section-intro">Directing AI let me iterate much faster. I could describe a change and see it almost immediately, instead of spending time on tedious work like resizing.</p>
+        <p class="section-intro">The thing I corrected most was visual feel. Layouts were often balanced mathematically but didn’t feel balanced, and that judgement stayed with me.</p>
+        <p class="section-intro">Next time I would start by comparing different models to find the best one for the job, instead of forcing one to work.</p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <nav class="project-pager" aria-label="More projects">
+        <a class="pager-link prev" href="../endmon/"><span>← Previous</span><strong>Endmon</strong></a>
+        <a class="pager-link next" href="../monkey-business/"><span>Next →</span><strong>Monkey Business</strong></a>
+      </nav>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <a class="footer-email" href="mailto:liza.grace.1020@gmail.com">liza.grace.1020@gmail.com</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/liza-zai-litten-56738219b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="https://discord.com/users/463021339553431582" target="_blank" rel="noopener" aria-label="Discord">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.4 2.84a13.8 13.8 0 0 0-.63 1.29 18.3 18.3 0 0 0-5.5 0 13.3 13.3 0 0 0-.64-1.29 19.7 19.7 0 0 0-4.93 1.53C.6 9.05-.24 13.6.18 18.1a19.9 19.9 0 0 0 6.04 3.05c.49-.66.92-1.36 1.3-2.1a12.9 12.9 0 0 1-2.04-.98c.17-.12.34-.25.5-.38a14.2 14.2 0 0 0 12.07 0c.17.14.33.27.5.38-.65.39-1.33.72-2.05.98.38.74.81 1.44 1.3 2.1a19.8 19.8 0 0 0 6.04-3.05c.5-5.22-.84-9.73-3.52-13.73zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.95-2.42 2.16-2.42 1.2 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/></svg>
+          </a>
+          <a href="mailto:liza.grace.1020@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2 .9v.35l8 5.33 8-5.33V6.4H4zm16 2.75-7.45 4.97a1 1 0 0 1-1.1 0L4 9.15V18h16V9.15z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-small">
+        <span>© <span id="year">2026</span> Liza “Zai” Litten</span>
+        <span>All art shown is my own. Do not use for AI image generation or NFTs.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js?v=202610310514"></script>
+</body>
+</html>
