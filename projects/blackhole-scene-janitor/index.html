@@ -54,7 +54,7 @@
 
         <div class="case-intro">
         <dl class="case-facts">
-          <div><dt>My role</dt><dd>Made for the Epic AI MegaJam 2026, where AI tools were part of the brief. I was the UI designer and decision-maker: I set the direction and the design rules, picked every screen’s direction from AI-generated options, and gave the art-direction notes behind each revision. I laid out the 63-node upgrade tree myself and gathered requirements from the lead and casino programmers. AI built the mockups and the first in-engine HUD and wrote the handoff documents; the lead programmer finished the implementation.</dd></div>
+          <div><dt>Role</dt><dd>Made for the Epic AI MegaJam 2026, where AI tools were part of the brief. UI designer and decision-maker: set the direction and design rules, selected every screen’s direction from AI-generated options, and gave the art-direction notes behind each revision. Also laid out the 63-node upgrade tree and gathered requirements from the lead and casino programmers. AI built the mockups and the first in-engine HUD and wrote the handoff documents; the lead programmer finished the implementation.</dd></div>
           <div><dt>The direction</dt><dd>An original holographic interface, projected into space rather than mounted in a cockpit, since the camera is third person. Thin condensed type, hairlines instead of boxes, one hexagon icon shape (outline for off, solid for on), and strict colour roles: off-white for text, gold only for credits, orange for alerts and red for danger.</dd></div>
           <div><dt>The rules</dt><dd>No heavy frames or boxes, following the art director’s preference from working on and playing sci-fi games. A dark glass backing only where the background is busy, such as over the bright black hole disk. Mouse-driven menus with no keyboard hints, because the keybinds changed almost daily. Every screen shows only data the game actually exposes.</dd></div>
         </dl>
@@ -68,11 +68,11 @@
     <section class="project-section" aria-labelledby="process">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="process">How I Worked</h2>
+          <h2 id="process">Process</h2>
         </div>
-        <p class="section-intro">Before designing anything, I set the rules for the AI. It could only touch the UI folder, two UI code files and the docs, on my own branch, and it changed nothing without my approval. Those limits made it safe to move fast in a repo I didn’t own, next to programmers changing the game underneath me.</p>
-        <p class="section-intro">Every screen went through the same loop. The AI read the game code to find what the screen had to show. I asked for several directions at once, picked one, then directed revisions by commenting on the exact element, like “move combo information to centre under combo circle.” Short, specific comments got accurate revisions in one pass, so I learned to write them like redlines. Before signing off, I checked each screen against the worst values the game could produce.</p>
-        <p class="section-intro">On the last day I stopped building in the engine and switched to handoff specs: one document per area, with exact positions, colours, font sizes and data fields, written so the lead’s AI agents could build each screen without seeing my boards. I also ran Claude and Codex side by side with a simple protocol: separate notes files, claiming files before editing, and one agent committing at a time.</p>
+        <p class="section-intro">Rules for the AI came before any design work. It could only touch the UI folder, two UI code files and the docs on a separate branch, and it changed nothing without approval. Those limits made it safe to move fast in a shared repo while programmers were changing the game underneath.</p>
+        <p class="section-intro">Every screen went through the same loop. The AI read the game code to find what the screen had to show and generated several directions at once. One was selected, then revised through comments on the exact element, such as “move combo information to centre under combo circle.” Short, specific comments produced accurate revisions in one pass, so comments were written like redlines. Before sign-off, each screen was checked against the worst values the game could produce.</p>
+        <p class="section-intro">On the last day, engine work stopped and the output switched to handoff specs: one document per area, with exact positions, colours, font sizes and data fields, written so the lead’s AI agents could build each screen without seeing the boards. Claude and Codex ran side by side under a simple protocol: separate notes files, claiming files before editing, and one agent committing at a time.</p>
       </div>
     </section>
 
@@ -81,8 +81,8 @@
         <div class="section-head">
           <h2 id="hud">HUD</h2>
         </div>
-        <p class="section-intro">The first full HUD, J3b, ran a thin strip across the top with skewed side wings to fake a perspective tilt, since Unreal’s UI has no perspective. Boost and the trash hold sat bottom centre, where your eyes already are while flying, and the weapon went in the bottom-left corner.</p>
-        <p class="section-intro">Then I tested it with real late-game numbers, and it broke: the mass text ran into the combo ring and the status list grew to seven long lines. The fix, A2, followed one rule: very specific fixes, not a redesign. Everything you own moved into one group at the top left. Chain and best chain became numbers with link and crown icons, centred under the combo ring. The magnet became a meter beside the tractor controls, and the object HP readout was sized for the longest debris name in the game.</p>
+        <p class="section-intro">The first full HUD, J3b, ran a thin strip across the top with skewed side wings to fake a perspective tilt, since Unreal’s UI has no perspective. Boost and the trash hold sat bottom centre, where the player’s eyes already are while flying, and the weapon went in the bottom-left corner.</p>
+        <p class="section-intro">Tested with real late-game numbers, it broke: the mass text ran into the combo ring and the status list grew to seven long lines. The fix, A2, followed one rule: very specific fixes, not a redesign. Everything the player owns moved into one group at the top left. Chain and best chain became numbers with link and crown icons, centred under the combo ring. The magnet became a meter beside the tractor controls, and the object HP readout was sized for the longest debris name in the game.</p>
         <div class="gallery cols-1">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/hud_start.webp" alt="In-game HUD at the start of a run with the movement tutorial prompt" loading="lazy" width="1600" height="900"></button>
@@ -109,7 +109,7 @@
         <div class="section-head">
           <h2 id="menus">Menus &amp; Settings</h2>
         </div>
-        <p class="section-intro">Fonts were split by job: Saira Condensed for the title, Barlow Light for menus and Roboto for the HUD, for legibility at small sizes. Settings has four tabs, and the team built it from my design during the jam.</p>
+        <p class="section-intro">Fonts were split by job: Saira Condensed for the title, Barlow Light for menus and Roboto for the HUD, for legibility at small sizes. Settings has four tabs, and the team built it from this design during the jam.</p>
         <div class="gallery cols-1">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/menu.webp" alt="In-game main menu with the title over the black hole" loading="lazy" width="1600" height="900"></button>
@@ -128,7 +128,7 @@
         <div class="section-head">
           <h2 id="upgrades">Upgrades</h2>
         </div>
-        <p class="section-intro">I laid out the final 63-node upgrade tree. The AI drew a 17-icon hexagon set in the style system and flagged that the game still used older 40-node data.</p>
+        <p class="section-intro">The final 63-node upgrade tree was laid out by hand. The AI drew a 17-icon hexagon set in the style system and flagged that the game still used older 40-node data.</p>
         <div class="gallery cols-1">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/upgrades.webp" alt="In-game upgrade tree with the Magnetic Propulsion panel open" loading="lazy" width="1600" height="900"></button>
@@ -143,7 +143,7 @@
         <div class="section-head">
           <h2 id="casino">Casino</h2>
         </div>
-        <p class="section-intro">Out of nine casino directions, I picked “Pure type” for the menu and the Appraiser’s Wheel, and “One big number” for the Lucky Machine. The wheel screen leaves a frame for the real 3D wheel model. The Lucky Machine keeps every part and number of the existing feature, because the programmer said it wouldn’t change; after review I had all its text enlarged by about 20%.</p>
+        <p class="section-intro">Out of nine casino directions, “Pure type” was chosen for the menu and the Appraiser’s Wheel, and “One big number” for the Lucky Machine. The wheel screen leaves a frame for the real 3D wheel model. The Lucky Machine keeps every part and number of the existing feature, because the programmer confirmed it wouldn’t change; after review, all its text was enlarged by about 20%.</p>
         <div class="gallery cols-1">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/casino_wheel.webp" alt="In-game Appraiser’s Wheel casino screen" loading="lazy" width="1600" height="900"></button>
@@ -162,7 +162,7 @@
         <div class="section-head">
           <h2 id="ending">End Screen</h2>
         </div>
-        <p class="section-intro">For the ending I chose “Held last frame.” Instead of fading fully to black after the maturity cutscene, the fade stops at about 80%, so the matured black hole stays visible behind the stats and the result screen shows what you made.</p>
+        <p class="section-intro">The ending uses the “Held last frame” direction. Instead of fading fully to black after the maturity cutscene, the fade stops at about 80%, so the matured black hole stays visible behind the stats and the result screen shows what the player made.</p>
         <div class="gallery cols-1">
           <figure class="wide">
             <button class="zoom"><img src="../../assets/Projects/BlackholeSceneJanitor/web/end.webp" alt="In-game end screen reading The black hole has matured, with run stats" loading="lazy" width="1600" height="900"></button>
@@ -175,12 +175,12 @@
     <section class="project-section" aria-labelledby="takeaways">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="takeaways">What I Learned</h2>
+          <h2 id="takeaways">Takeaways</h2>
         </div>
-        <p class="section-intro">Directing AI let me iterate much faster. I could describe a change and see it almost immediately, instead of spending time on tedious work like resizing.</p>
-        <p class="section-intro">The thing I corrected most was visual feel. Layouts were often balanced mathematically but didn’t feel balanced, and that judgement stayed with me.</p>
-        <p class="section-intro">Writing each screen down well enough for another AI to build it made my decisions sharper: every choice needed a number and a reason, because “it looks right on the board” isn’t something an agent can implement.</p>
-        <p class="section-intro">Next time I would start by comparing different models to find the best one for the job, instead of forcing one to work.</p>
+        <p class="section-intro">Directing AI made iteration much faster. A change could be described and seen almost immediately, instead of spent on tedious work like resizing.</p>
+        <p class="section-intro">The most frequent correction was visual feel. Layouts were often balanced mathematically but didn’t feel balanced, and that judgement couldn’t be handed off.</p>
+        <p class="section-intro">Writing each screen down well enough for another AI to build it sharpened the decisions: every choice needed a number and a reason, because “it looks right on the board” isn’t something an agent can implement.</p>
+        <p class="section-intro">Next time, the first step would be comparing different models to find the best one for the job, instead of forcing one to work.</p>
       </div>
     </section>
 
